@@ -1,39 +1,9 @@
 <a name="readme-top"></a>
 
-<!--
-!!! IMPORTANT !!!
-This README is an example of how you could professionally present your codebase. 
-Writing documentation is a crucial part of your work as a professional software developer and cannot be ignored. 
-
-You should modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-OPTIONAL SECTIONS:
-- FAQ
-
-After you're finished please remove all the comments and instructions!
-
-For more information on the importance of a professional README for your repositories: https://github.com/microverseinc/curriculum-transversal-skills/blob/main/documentation/articles/readme_best_practices.md
--->
 
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
 
-  <h3><b>Microverse README Template</b></h3>
+  <h3><b>Todoist Clone</b></h3>
 
 </div>
 
@@ -63,17 +33,17 @@ For more information on the importance of a professional README for your reposit
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [Todosit Clone] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+> It is a clone of [Todosit app](https://todoist.com/)
 
-**[your_project__name]** is a...
+**[Todoist clone]** is a project covering state management, and ui/ux capabilities through building a todoist application
 
-## 🛠 Built With <a name="built-with"></a>
+## 🛠 Built With <a name="built-with">React, Vite</a>
 
-### Tech Stack <a name="tech-stack"></a>
+### Tech Stack <a name="tech-stack">React, Vite </a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
+> Built with React - to handle state management and state context. chakra ui to handle the ui/
 
 <details>
   <summary>Client</summary>
@@ -82,6 +52,8 @@ For more information on the importance of a professional README for your reposit
   </ul>
 </details>
 
+
+<!-- 
 <details>
   <summary>Server</summary>
   <ul>
@@ -95,20 +67,20 @@ For more information on the importance of a professional README for your reposit
     <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
   </ul>
 </details>
-
+-->
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **[Creating todo under project]**
+- **[CRUD functionality for the todo]**
+- **[interactive design and track of todos]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
+<!-- LIVE DEMO 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
@@ -117,8 +89,9 @@ For more information on the importance of a professional README for your reposit
 - [Live Demo Link](https://google.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+-->
 
-<!-- GETTING STARTED -->
+<!-- GETTING STARTED 
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -129,6 +102,7 @@ To get a local copy up and running, follow these steps.
 ### Prerequisites
 
 In order to run this project you need:
+-->
 
 <!--
 Example command:
@@ -136,11 +110,12 @@ Example command:
 ```sh
  gem install rails
 ```
- -->
+ 
 
 ### Setup
 
 Clone this repository to your desired folder:
+-->
 
 <!--
 Example commands:
@@ -149,12 +124,12 @@ Example commands:
   cd my-folder
   git clone git@github.com:myaccount/my-project.git
 ```
---->
+
 
 ### Install
 
 Install this project with:
-
+--->
 <!--
 Example command:
 
@@ -162,11 +137,12 @@ Example command:
   cd my-project
   gem install
 ```
---->
+
 
 ### Usage
 
 To run the project, execute the following command:
+--->
 
 <!--
 Example command:
@@ -174,24 +150,24 @@ Example command:
 ```sh
   rails server
 ```
---->
+
 
 ### Run tests
 
 To run tests, run the following command:
-
+--->
 <!--
 Example command:
 
 ```sh
   bin/rails test test/models/article_test.rb
 ```
---->
+
 
 ### Deployment
 
 You can deploy this project using:
-
+--->
 <!--
 Example:
 
@@ -202,7 +178,7 @@ Example:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- AUTHORS -->
+<!-- AUTHORS 
 
 ## 👥 Authors <a name="authors"></a>
 
@@ -221,8 +197,10 @@ Example:
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+-->
 
-<!-- FUTURE FEATURES -->
+
+<!-- FUTURE FEATURES 
 
 ## 🔭 Future Features <a name="future-features"></a>
 
@@ -234,7 +212,8 @@ Example:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTRIBUTING -->
+-->
+<!-- CONTRIBUTING
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -244,7 +223,9 @@ Feel free to check the [issues page](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
+ -->
+
+<!-- SUPPORT
 
 ## ⭐️ Show your support <a name="support"></a>
 
@@ -254,7 +235,9 @@ If you like this project...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGEMENTS -->
+ -->
+ 
+<!-- ACKNOWLEDGEMENTS 
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
@@ -263,8 +246,10 @@ If you like this project...
 I would like to thank...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+-->
 
-<!-- FAQ (optional) -->
+
+<!-- FAQ (optional)
 
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
 
@@ -279,8 +264,10 @@ I would like to thank...
   - [Answer_2]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
+ 
+ -->
+ 
+<!-- LICENSE 
 
 ## 📝 License <a name="license"></a>
 
@@ -289,3 +276,4 @@ This project is [MIT](./LICENSE) licensed.
 _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+-->
