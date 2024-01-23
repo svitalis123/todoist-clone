@@ -3,7 +3,7 @@
 
 <div align="center">
 
-  <h3><b>Todoist Clone</b></h3>
+  <h1><b>Todoist Clone</b></h1>
 
 </div>
 
@@ -33,7 +33,7 @@
 -->
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Todosit Clone] <a name="about-project"></a>
+# 📖 Todosit Clone <a name="about-project"></a>
 
 > It is a clone of [Todosit app](https://todoist.com/)
 
