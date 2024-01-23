@@ -7,7 +7,7 @@
 
 </div>
 
-<!-- TABLE OF CONTENTS -->
+<!-- TABLE OF CONTENTS 
 
 # 📗 Table of Contents
 
@@ -30,7 +30,7 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
-
+-->
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 [Todosit Clone] <a name="about-project"></a>
@@ -71,8 +71,6 @@
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
-
-> Describe between 1-3 key features of the application.
 
 - **[Creating todo under project]**
 - **[CRUD functionality for the todo]**
