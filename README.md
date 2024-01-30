@@ -3,7 +3,7 @@
 
 <div align="center">
 
-  <h1><b>Todoist Clone</b></h1>
+  <h1><b>Todoist Clone (todo management app)</b></h1>
 
 </div>
 
