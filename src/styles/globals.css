@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  h1 {
+    @apply font-sans text-[26px] font-semibold leading-[30px]
+  }
+
+  h2 {
+    @apply font-semibold text-[24px] leading-[20px]
+  }
+
+  button {
+    @apply text-[24px] text-button_color outline-none bg-transparent hover:underline
+  }
+
+  ul {
+    @apply list-none
+  }
+
+  a {
+    @apply flex no-underline outline-none align-middle p-[5px] font-normal 
+  }
+
+  body, html {
+    @apply font-serif text-[16px]
+  }
+}
