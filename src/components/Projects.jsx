@@ -5,50 +5,63 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible"
 import { Button } from "@/components/ui/button";
-import { CaretSortIcon } from "@radix-ui/react-icons"
-import { CiCalendarDate } from 'react-icons/ci';
+import { CaretSortIcon } from "@radix-ui/react-icons";
+import { FaPlus } from "react-icons/fa6";
+import { Thetask, Thedispatch } from '@/components/LevelContext';
+import { CiHashtag } from "react-icons/ci";
+import {
+  Dialog,
+  DialogContent,
+  DialogClose,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 
-function Projects() {
-  const [isOpen, setIsOpen] = React.useState(true)
+function Projects({settitle}) {
+  const [title, setTitle] = useState('');
+  let tasks = Thetask();
+  const dispatch = Thedispatch();
+  let filteredtask = {
+    projects: tasks.projects.filter(task => task.title !== 'inbox')
+  };
   return (
     <div>
       <Collapsible
-      open={isOpen}
-      onOpenChange={setIsOpen}
       >
         <CollapsibleTrigger className='pl-4 flex justify-between w-full'>
             <span>Projects</span>
-            <Button variant="ghost" size="sm">
-              <CaretSortIcon className="h-4 w-4" />
-              <span className="sr-only">Toggle</span>
-            </Button>
+            <div className="flex gap-3">
+              <Dialog >
+                <DialogTrigger> <FaPlus className="h-4 w-4"/></DialogTrigger>
+                <DialogContent className="bg-inherit text-inherit">
+                  <DialogHeader>
+                    <DialogTitle>Add Title</DialogTitle>
+                    <input className="text-color1" type="text" onChange={(e) => setTitle(e.target.value)} />
+                    <DialogClose asChild>
+                      <Button onClick={() => {dispatch({type:"ADD_PROJECT", payload:{title: title}})}}>Create Project</Button>
+                    </DialogClose>
+                  </DialogHeader>
+                </DialogContent>
+              </Dialog>
+              <Button variant="ghost" size="sm">
+                <CaretSortIcon className="h-4 w-4" />
+                <span className="sr-only">Toggle</span>
+              </Button>
+            </div>            
           </CollapsibleTrigger>
         <CollapsibleContent>
           <ul>
-            <li class="flex gap-2 place-items-center px-4 text-[18px] cursor-pointer">
-              <CiCalendarDate className="text-[24px]" />
-              <span>
-                Today
-              </span>
-            </li>
-            <li class="flex gap-2 place-items-center px-4 text-[18px] cursor-pointer">
-              <CiCalendarDate className="text-[24px]" />
-              <span>
-                Tomorrow
-              </span>
-            </li>
-            <li class="flex gap-2 place-items-center px-4 text-[18px]">
-              <CiCalendarDate className="text-[24px] cursor-pointer" />
-              <span>
-                After
-              </span>
-            </li>
-            <li class="flex gap-2 place-items-center px-4 text-[18px] cursor-pointer">
-              <CiCalendarDate className="text-[24px]" />
-              <span>
-                Later
-              </span>
-            </li>
+            {
+              filteredtask.projects.map((project) => (
+                <li key={project.title} className="flex gap-2 place-items-center px-4 text-[18px] cursor-pointer" onClick={() => settitle(project.title)}>
+                  <CiHashtag className="text-[24px]" />
+                  <span className="capitalize">
+                    {project.title}
+                  </span>
+                </li>
+              )) 
+            }
           </ul>
         </CollapsibleContent>
       </Collapsible>
