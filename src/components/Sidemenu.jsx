@@ -13,6 +13,7 @@ function sidemenu({settitle}) {
   const [content, setcontent] = useState({title: '', des: '', editeddes: ''})
   let tasks = Thetask();
   const dispatch = Thedispatch();
+  let filteredtask = tasks.projects.filter((project) => project.title === 'inbox');
   let taskadder;
   tasker ? 
     taskadder=(
@@ -23,7 +24,7 @@ function sidemenu({settitle}) {
           <Button onClick={() => settasker(false)} className="bg-grey" >
             Cancel
           </Button>
-          <Button className="bg-tomato" onClick={() => {dispatch({type: "ADD_TASK", payload:{id: tasks.projects.id ,project: "inbox", title: content.title, des: content.des}}); settasker(false) }}>
+          <Button className="bg-tomato" onClick={() => {dispatch({type: "ADD_TASK", payload:{id: filteredtask[0]?.todos.length ,project: "inbox", title: content.title, des: content.des}}); settasker(false) }}>
             Add Task
           </Button>
         </div>  

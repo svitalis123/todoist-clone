@@ -38,8 +38,8 @@ function mainReducer(state, action) {
         ...state,
         projects: state.projects.map((project) => {
           return project.title === action.payload.project ? {...project, 
-            todos: project.todos.map((todo) => 
-              todo.id === action.payload.todo.id ? {...todo, des: action.payload.todo.des} : todo
+            todos: project.todos.map((todo) => {
+              return todo.id === action.payload.todo.id ? {...todo, des: action.payload.todo.des} : todo}
             )
           }: project
         })

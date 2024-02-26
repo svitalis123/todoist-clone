@@ -17,6 +17,9 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
+import {
+  SheetClose,
+} from "@/components/ui/sheet";
 
 function Projects({settitle}) {
   const [title, setTitle] = useState('');
@@ -29,11 +32,19 @@ function Projects({settitle}) {
     <div>
       <Collapsible
       >
-        <CollapsibleTrigger className='pl-4 flex justify-between w-full'>
+        <CollapsibleTrigger className='pl-0 md:pl-4 flex justify-between w-full'>
             <span>Projects</span>
             <div className="flex gap-3">
-              <Dialog >
-                <DialogTrigger> <FaPlus className="h-4 w-4"/></DialogTrigger>
+            
+              <Button variant="ghost" size="sm">
+                <CaretSortIcon className="h-4 w-4" />
+                <span className="sr-only">Toggle</span>
+              </Button>
+            </div>            
+          </CollapsibleTrigger>
+        <CollapsibleContent>
+        <Dialog >
+              <DialogTrigger className="flex justify-center"> <FaPlus className="h-4 w-[10rem] mx-auto"/></DialogTrigger>
                 <DialogContent className="bg-inherit text-inherit">
                   <DialogHeader>
                     <DialogTitle>Add Title</DialogTitle>
@@ -44,22 +55,17 @@ function Projects({settitle}) {
                   </DialogHeader>
                 </DialogContent>
               </Dialog>
-              <Button variant="ghost" size="sm">
-                <CaretSortIcon className="h-4 w-4" />
-                <span className="sr-only">Toggle</span>
-              </Button>
-            </div>            
-          </CollapsibleTrigger>
-        <CollapsibleContent>
           <ul>
             {
               filteredtask.projects.map((project) => (
+                <>
                 <li key={project.title} className="flex gap-2 place-items-center px-4 text-[18px] cursor-pointer" onClick={() => settitle(project.title)}>
                   <CiHashtag className="text-[24px]" />
                   <span className="capitalize">
                     {project.title}
                   </span>
                 </li>
+                </>
               )) 
             }
           </ul>
