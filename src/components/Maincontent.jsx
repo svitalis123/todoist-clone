@@ -21,7 +21,7 @@ function maincontent({title}) {
           <Button onClick={() => settasker(false)} className="bg-grey" >
             Cancel
           </Button>
-          <Button className="bg-tomato" onClick={() => {dispatch({type: "ADD_TASK", payload:{id: tasks.projects.id ,project: title, title: content.title, des: content.des}}); settasker(false) }}>
+          <Button className="bg-tomato" onClick={() => {dispatch({type: "ADD_TASK", payload:{id: filteredtask[0]?.todos.length ,project: title, title: content.title, des: content.des}}); settasker(false) }}>
             Add Task
           </Button>
         </div>  

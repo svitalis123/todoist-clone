@@ -1,13 +1,9 @@
 ---
 import { ModeToggle } from '@/components/ModeToggle';
-import Smallsidemenu from './Smallsidemenu';
 ---
 
 <header>
-  <nav class="flex w-[90%] m-auto  justify-between pt-4 md:justify-end">
-    <div class="md:hidden">
-      <Smallsidemenu client:load />
-    </div>
+  <nav class="flex w-[90%] m-auto justify-end pt-4">
     <ModeToggle client:load />
   </nav>
 </header>
