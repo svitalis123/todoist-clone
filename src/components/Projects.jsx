@@ -35,8 +35,16 @@ function Projects({settitle}) {
         <CollapsibleTrigger className='pl-0 md:pl-4 flex justify-between w-full'>
             <span>Projects</span>
             <div className="flex gap-3">
-              <Dialog >
-                <DialogTrigger> <FaPlus className="h-4 w-4"/></DialogTrigger>
+            
+              <Button variant="ghost" size="sm">
+                <CaretSortIcon className="h-4 w-4" />
+                <span className="sr-only">Toggle</span>
+              </Button>
+            </div>            
+          </CollapsibleTrigger>
+        <CollapsibleContent>
+        <Dialog >
+              <DialogTrigger className="flex justify-center"> <FaPlus className="h-4 w-[10rem] mx-auto"/></DialogTrigger>
                 <DialogContent className="bg-inherit text-inherit">
                   <DialogHeader>
                     <DialogTitle>Add Title</DialogTitle>
@@ -47,13 +55,6 @@ function Projects({settitle}) {
                   </DialogHeader>
                 </DialogContent>
               </Dialog>
-              <Button variant="ghost" size="sm">
-                <CaretSortIcon className="h-4 w-4" />
-                <span className="sr-only">Toggle</span>
-              </Button>
-            </div>            
-          </CollapsibleTrigger>
-        <CollapsibleContent>
           <ul>
             {
               filteredtask.projects.map((project) => (
